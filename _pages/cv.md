@@ -9,9 +9,9 @@ redirect_from:
 
 {% include base_path %}
 
-<span style="float:left;padding:6px"> 
-  someone@email.com <br> mobile: +852 xxxxxxxx <br> Nationality: Chinese
-</span>
+* email: 173957911@qq.com
+* mobile: +86 15810020115
+* Nationality: Chinese
 
 
 Education
@@ -20,8 +20,6 @@ Education
 * M.S. in Institute for Network Sciences and Cyberspace, Tsinghua University, 2020 ~ 2023
 
 Work experience
-
-
 ======
 * Summer 2015: Research Assistant
   * Github University
