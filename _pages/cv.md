@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-<span style="float:right;padding:6px"> 
+<span style="float:left;padding:6px"> 
   someone@email.com <br> mobile: +852 xxxxxxxx <br> Nationality: Chinese
 </span>
 
