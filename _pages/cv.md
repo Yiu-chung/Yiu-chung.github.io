@@ -13,11 +13,14 @@ redirect_from:
 * mobile: +86 15810020115
 * Nationality: Chinese
 
+***
 
 Education
 ======
 * B.S. in School of Physics, Peking University, 2014 ~ 2018
 * M.S. in Institute for Network Sciences and Cyberspace, Tsinghua University, 2020 ~ 2023
+
+***
 
 Work experience
 ======
@@ -30,7 +33,9 @@ Work experience
   * Github University
   * Duties included: Merging pull requests
   * Supervisor: Professor Hub
-  
+
+***
+
 Skills
 ======
 * Skill 1
@@ -40,24 +45,32 @@ Skills
   * Sub-skill 2.3
 * Skill 3
 
+***
+
 Publications
 ======
   <ul>{% for post in site.publications %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
+
+***
+
 Talks
 ======
   <ul>{% for post in site.talks %}
     {% include archive-single-talk-cv.html %}
   {% endfor %}</ul>
-  
+
+***
+
 Teaching
 ======
   <ul>{% for post in site.teaching %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
+
+***
+
 Service and leadership
 ======
 * Currently signed in to 43 different slack teams
