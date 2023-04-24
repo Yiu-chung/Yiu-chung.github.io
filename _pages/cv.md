@@ -30,55 +30,61 @@ Honors and Awards
 
 ***
 
-Work experience
+Work Experience
 ======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* **Software Development Engineer Intern**, Hulu, Beijing (
+Jun 2022 - Sep 2022)
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+  *Survey on Machine Learning Model Studio*: Research and compare the capabilities of industry machine learning platforms such as Kubeflow, Amazon SageMaker, Azure ML Studio, Huawei ModelArts, and so on. Migrate some of the team's ML jobs to Kubeflow.
+
+* **Network Development Engineer Intern**, ByteDance, Beijing (Jul 2021 - Sep 2021)
+
+  *Anomaly detection and troubleshooting based on multi-dimensional network monitoring data*: Design and develop an intelligent root cause diagnosis system to correlate multi-dimensional measurement data and analyze the exact location of failure occurrence instead of manual verification.
+
+* **Big Data Engineer Intern**, Xiaomi, Beijing (
+Jun 2020 - Aug 2020)
+
+  *Large-scale user log analysis*: Count (using HiveSql) and analyze log data of millions of users per day; Design reasonable statistical metrics, analyze the impact of newly introduced features in Xiaomi products on users' usage by comparing experimental and control groups, and submit analysis reports.
+
+* **R&D Engineer**, NSFOCUS Technologies Group Co., Ltd, Beijing (
+Jul 2018 - Oct 2019)
+
+  *Big data platform development*: Participate and lead the development of data collection, task management, and user security authentication in the big data platform. The platform provides terabytes of memory resources and petabytes of storage resources for 100+ researchers of the company.
+
+  *Automatic report generation system*: This system automatically visualizes user log data, generates weekly and monthly reports, and regularly submits them to relevant colleagues.
 
 ***
 
-Skills
+Research Projects
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* **Distributed Network Measurement Platform**, Oct 2020 - Jun 2021
+  
+  Build a distributed probing platform with a 1+N structure (1 master + N probes), aiming to meet the needs of large-scale network measurement research in our laboratory;  Integrate multiple open source projects, integrate various network measurement and scanning functions, and successfully build a fully functional prototype system.
 
-***
+* **Efficient Network Performance Measurement Tool**, 
+Nov 2020 - Nov 2021
+
+  Existing active measurement tools tend to measure a single metric with significant intrusion traffic. Instead, we designed a new tool [PerfTrace](https://github.com/Yiu-chung/PerfTrace) that uses a combination of measurement and inference to obtain four metrics of latency, jitter, packet loss, and bandwidth more accurately using only a tiny amount of intrusion traffic.
+
 
 Publications
 ======
-  <ul>{% for post in site.publications %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+1. **Yaozhong Liu**, Jiahai Yang, Zhiliang Wang, Long Pan, Lin He, Jinlei Lin, Guanglei Song and Chenglong Li. What Causes Delay Asymmetry: A Large-scale One-way Delay Measurement and Empirical Study[C]//GLOBECOM 2022-2022 IEEE Global Communications Conference. IEEE, 2022: 6127-6132. (TH-CPL B)
+2. **Yaozhong Liu**, Zhiliang Wang, Jiahai Yang, Long Pan, Lin He, Jinlei Lin, Guanglei Song and Chenglong Li. Both efficient and accurate: A large-scale one-way delay measurement scheme[C]//GLOBECOM 2022-2022 IEEE Global Communications Conference. IEEE, 2022: 395-400. (TH-CPL B)
+3. **Yaozhong Liu**, Long Pan, Chenglong Li, Lin He, Yirui Luo, Guanglei Song, Jiahai Yang and Zhiliang Wang. PerfTrace: A New Multi-metric Network Performance Monitoring Tool[C]//2022 18th International Conference on Network and Service Management (CNSM). IEEE, 2022: 240-246. (TH-CPL B)
+4. Long Pan, Jiahai Yang, Lin He, Zhiliang Wang, Leyao Nie, Guanglei Song and **Yaozhong Liu**. Your Router is My Prober: Measuring IPv6 Networks via ICMP Rate Limiting Side Channels//NDSS. 2023 (Distinguished Paper Award). (TH-CPL A)
+5. Guanglei Song, Jiahai Yang, Lin He, Zhiliang Wang, Guo Li, Chenxin Duan, **Yaozhong Liu** and Zhongxiang Sun. {AddrMiner}: A Comprehensive Global Active {IPv6} Address Discovery System[C]//2022 USENIX Annual Technical Conference (USENIX ATC 22). 2022: 309-326. (TH-CPL A)
+
+For more information, please visit [Publications](https://yiu-chung.github.io/publications/) page
 
 ***
 
-Talks
+Others
 ======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
+* Skills: Python, C/C++
+* Languages: English (CET-6), Chinese (Native)
+* Interests: Swimming, Outdoor Cycling
 
 ***
 
-Teaching
-======
-  <ul>{% for post in site.teaching %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
 
-***
-
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
