@@ -9,18 +9,21 @@ redirect_from:
 
 {% include base_path %}
 
-<div class="language-switch">
-  <a href="/cn/">中文</a>/
-  <a href="/">English</a>
-</div>
+
 <style>
   .language-switch {
     position: absolute;
-    top: 100px;
+    top: -20px;
     right: 20px;
   }
 </style>
 
+<div style="position: relative;">
+  <div class="language-switch">
+  <a href="/cn/">中文</a>/
+  <a href="/">English</a>
+</div>
+</div>
 
 * email: 173957911@qq.com
 * mobile: +86 15810020115
