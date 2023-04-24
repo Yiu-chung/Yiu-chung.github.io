@@ -1,7 +1,7 @@
 ---
 layout: archive
-title: "Yaozhong Liu"
-permalink: /cv/
+title: "刘耀忠"
+permalink: /cn/cv/
 author_profile: true
 redirect_from:
   - /resume
@@ -20,8 +20,8 @@ redirect_from:
 
 <div style="position: relative;">
   <div class="language-switch">
-  <a href="/cn/cv/">中文</a>/
-  <a href="/cv/">English</a>
+  <a href="/cv/">English</a>/
+  <a href="/cn/cv/">中文</a>
 </div>
 </div>
 
