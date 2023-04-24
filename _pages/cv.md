@@ -13,7 +13,7 @@ redirect_from:
 <style>
   .language-switch {
     position: absolute;
-    top: -20px;
+    top: -30px;
     right: 20px;
   }
 </style>
