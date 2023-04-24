@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "CV"
+title: "Yaozhong Liu"
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -9,12 +9,19 @@ redirect_from:
 
 {% include base_path %}
 
+<span style="float:right;padding:6px"> 
+  someone@email.com <br> mobile: +852 xxxxxxxx <br> Nationality: Chinese
+</span>
+
+
 Education
 ======
-* B.S. in School of Physics, Peking University, 2014 - 2018
-* M.S. in Institute for Network Sciences and Cyberspace, Tsinghua University, 2020 - 2023
+* B.S. in School of Physics, Peking University, 2014 ~ 2018
+* M.S. in Institute for Network Sciences and Cyberspace, Tsinghua University, 2020 ~ 2023
 
 Work experience
+
+
 ======
 * Summer 2015: Research Assistant
   * Github University
