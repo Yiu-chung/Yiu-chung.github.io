@@ -25,8 +25,8 @@ Education
 Honors and Awards
 =====
 * 03/2023, [NDSS 2023 Distinguished Paper Award](https://Yiu-chung.github.io/files/ndss23-distinguished-award.pdf).
-* 10/2022, [清华之友-丰田奖学金](https://Yiu-chung.github.io/files/thu_award.pdf).
-* 12/2016, [Award for Academic Excellents](https://Yiu-chung.github.io/files/pku_award.pdf).
+* 10/2022, [清华之友-丰田奖学金](https://Yiu-chung.github.io/files/thu_award.jpg).
+* 12/2016, [Award for Academic Excellents](https://Yiu-chung.github.io/files/pku_award.jpg).
 
 ***
 
