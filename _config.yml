@@ -9,7 +9,7 @@
 locale                   : "en-US"
 title                    : "Yiu-chung's site"
 title_separator          : "-"
-name                     : &name "Yaozhong Liu (刘耀忠)"
+name                     : &name "Yaozhong Liu"
 description              : &description "personal description"
 url                      : https://Yiu-chung.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"

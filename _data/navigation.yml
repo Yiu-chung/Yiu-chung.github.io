@@ -12,6 +12,9 @@ main:
   - title: "Career History"
     url: /careers/
 
+  - title: "中文"
+    url: /cn/
+
   # - title: "Talks"
   #   url: /talks/    
 
