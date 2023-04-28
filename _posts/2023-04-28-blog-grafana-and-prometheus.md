@@ -1,7 +1,7 @@
 ---
-title: 'Blog Post number 4'
-date: 2015-08-14
-permalink: /posts/2012/08/blog-post-4/
+title: 'grafana-and-prometheus'
+date: 2023-04-28
+permalink: /posts/2023/04/grafana-and-prometheus/
 tags:
   - cool posts
   - category1
