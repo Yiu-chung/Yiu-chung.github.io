@@ -27,17 +27,14 @@ tags:
   sslverify=1
   sslcacert=/etc/pki/tls/certs/ca-bundle.crt
   EOF
-
   ```
 - 安装 Grafana：
   ```sh
   sudo yum install grafana
-
   ```
 - 启动Grafana服务：
   ```sh
   sudo systemctl start grafana-server
-
   ```
 - 在web浏览器中通过http://YourIP:3000 访问该服务，首次登陆默认用户和密码都是admin，登录后可修改密码提高安全性：
 
@@ -54,13 +51,11 @@ tags:
   wget https://github.com/prometheus/prometheus/releases/download/v2.33.1/prometheus-2.33.1.linux-amd64.tar.gz
   tar xvfz prometheus-2.33.1.linux-amd64.tar.gz
   cd prometheus-2.33.1.linux-amd64
-
   ```
 - 编辑prometheus.yml文件配置prometheus，暂时使用默认配置即可；
 - 启动prometheus：
   ```sh
   ./prometheus --config.file=prometheus.yml
-
   ```
 - 在web浏览器中通过http://YourIP:9090 访问prometheus：
   ![prometheus主页](https://Yiu-chung.github.io/images/prometheus_home.png)
@@ -68,7 +63,6 @@ tags:
   ```sh
   sudo firewall-cmd --add-port=9090/tcp --permanent
   sudo firewall-cmd --reload
-
   ```
 
 ### 3. 使用node_exporter监控节点 (optinal)
@@ -78,7 +72,6 @@ tags:
   wget https://github.com/prometheus/node_exporter/releases/download/v1.2.2/node_exporter-1.2.2.linux-amd64.tar.gz
   tar zxvf node_exporter-1.2.2.linux-amd64.tar.gz
   cd node_exporter-1.2.2.linux-amd64.tar.gz
-
   ```
 - 启动node_exporter：
   ```sh
