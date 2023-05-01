@@ -92,6 +92,56 @@ tags:
   ```sh
   wget https://github.com/prometheus/pushgateway/releases/download/v1.5.1/pushgateway-1.5.1.linux-amd64.tar.gz
   ```
+- 解压文件并运行Pushgateway：
+  ```sh
+  tar -zxvf pushgateway-1.4.0.linux-amd64.tar.gz
+  cd pushgateway-1.5.1.linux-amd64/
+  ./pushgateway
+  ```
+- 验证Pushgateway服务是否成功启动，访问http://YourIP:9091 ，如果能够访问，说明启动成功；
+- 配置Prometheus中的Pushgateway，在Prometheus的配置文件prometheus.yml中添加如下配置项：
+  ```yaml
+  scrape_configs:
+    - job_name: 'pushgateway'
+      honor_labels: true
+      scrape_interval: 5s
+      static_configs:
+        - targets: ['localhost:9091']
+  ```
+- 重新启动Prometheus服务使配置生效。
+
+### 5. 使用Prometheus client库（python）上传数据
+- 安装Prometheus client库：
+  ```
+  pip install prometheus_client
+  ```
+- 编写Python代码，将JSON数据上传到Pushgateway中。以下是一个示例代码：
+  ```python
+  from prometheus_client import CollectorRegistry, Gauge, push_to_gateway
+  # 假设要上传的数据如下
+  data = {
+      "sip": "10.0.0.1",
+      "dip": "10.0.0.2",
+      "latency": 20,
+  }
+
+  # 创建Gauge对象
+  g = Gauge('my_metric', 'A gauge', ['sip', 'dip'])
+
+  # 设置指标值
+  g.labels(sip=data["sip"], dip=data["dip"]).set(data["latency"])
+
+  # 推送数据至Pushgateway
+  push_to_gateway('localhost:9091', job='my_job', registry=CollectorRegistry())
+  ```
+### 6. 在prometheus中进行数据聚合：
+- 按照时间聚合：
+
+- 按照标签聚合：
+
+### 7. 将数据接入到Grafana中，设置Dashboard
+
+### 8. 在Grafana中设置告警
 
 Headings are cool
 ======
