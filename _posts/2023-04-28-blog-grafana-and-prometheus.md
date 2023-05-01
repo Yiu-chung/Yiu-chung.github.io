@@ -15,7 +15,7 @@ tags:
 整体包括以下几步：
 ### 1. 安装grafana
 - 在CentOS上安装Grafana的yum源：
-  ```
+  ```sh
   sudo tee /etc/yum.repos.d/grafana.repo <<EOF
   [grafana]
   name=grafana
@@ -30,24 +30,74 @@ tags:
 
   ```
 - 安装 Grafana：
-  ```
+  ```sh
   sudo yum install grafana
 
   ```
 - 启动Grafana服务：
-  ```
+  ```sh
   sudo systemctl start grafana-server
 
   ```
-- 在浏览器中通过3000端口访问该服务，首次登陆默认用户和密码都是admin，登录后可修改密码提高安全性：
-  ```
-  http://yourIP:3000
-  ```
-  ![](https://Yiu-chung.github.io/images/grafana_login.png)
+- 在web浏览器中通过http://YourIP:3000 访问该服务，首次登陆默认用户和密码都是admin，登录后可修改密码提高安全性：
+
+  ![grafana登录页](https://Yiu-chung.github.io/images/grafana_login.png)
 - 如果无法访问，有可能是防火墙问题，需要打开相应的端口：
   ```
   sudo firewall-cmd --add-port=3000/tcp --permanent
   sudo firewall-cmd --reload
+  ```
+
+### 2. 安装并运行prometheus
+- 下载二进制文件：
+  ```sh
+  wget https://github.com/prometheus/prometheus/releases/download/v2.33.1/prometheus-2.33.1.linux-amd64.tar.gz
+  tar xvfz prometheus-2.33.1.linux-amd64.tar.gz
+  cd prometheus-2.33.1.linux-amd64
+
+  ```
+- 编辑prometheus.yml文件配置prometheus，暂时使用默认配置即可；
+- 启动prometheus：
+  ```sh
+  ./prometheus --config.file=prometheus.yml
+
+  ```
+- 在web浏览器中通过http://YourIP:9090 访问prometheus：
+  ![prometheus主页](https://Yiu-chung.github.io/images/prometheus_home.png)
+- 同上，如有防火墙，需开放相应端口：
+  ```sh
+  sudo firewall-cmd --add-port=9090/tcp --permanent
+  sudo firewall-cmd --reload
+
+  ```
+
+### 3. 使用node_exporter监控节点 (optinal)
+使用node_exporter可以监控机器的负载情况，可以监控节点的CPU、memory等的使用情况。 
+- 下载node_exporter的二进制文件：
+  ```sh
+  wget https://github.com/prometheus/node_exporter/releases/download/v1.2.2/node_exporter-1.2.2.linux-amd64.tar.gz
+  tar zxvf node_exporter-1.2.2.linux-amd64.tar.gz
+  cd node_exporter-1.2.2.linux-amd64.tar.gz
+
+  ```
+- 启动node_exporter：
+  ```sh
+  ./node_exporter
+  ```
+- 配置prometheus.yml文件，将node_exporter监控的数据送往prometheus。在prometheus.yml中scrape_configs下<font color="#dddd00">增加</font>以下内容：
+  ```yaml
+  scrape_configs:
+    - job_name: 'node'
+      static_configs:
+        - targets: ['YourNodeIP:9100']
+
+  ```
+- 访问prometheus的主页http://YourIP:9090 ，
+
+### 4. 在服务器上安装Pushgateway用于接收数据
+- 下载Pushgateway二进制文件：
+  ```sh
+  wget https://github.com/prometheus/pushgateway/releases/download/v1.5.1/pushgateway-1.5.1.linux-amd64.tar.gz
   ```
 
 Headings are cool
