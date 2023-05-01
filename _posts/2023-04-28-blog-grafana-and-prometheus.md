@@ -85,7 +85,7 @@ tags:
   ./node_exporter
   ```
 - 配置prometheus.yml文件，将node_exporter监控的数据送往prometheus。在prometheus.yml中scrape_configs下<font color="#dddd00">增加</font>以下内容：
-  ```yaml
+  ```sh
   scrape_configs:
     - job_name: 'node'
       static_configs:
@@ -95,7 +95,7 @@ tags:
 - 访问prometheus的主页http://YourIP:9090 ，
 
 ### 4. 在服务器上安装Pushgateway用于接收数据
-- 下载Pushgateway二进制文件：
+- 下载Pushgateway二进制文件（选择合适的版本）：
   ```sh
   wget https://github.com/prometheus/pushgateway/releases/download/v1.5.1/pushgateway-1.5.1.linux-amd64.tar.gz
   ```
