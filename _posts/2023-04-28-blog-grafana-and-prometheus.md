@@ -85,12 +85,12 @@ tags:
   ./node_exporter
   ```
 - 配置prometheus.yml文件，将node_exporter监控的数据送往prometheus。在prometheus.yml中scrape_configs下<font color="#dddd00">增加</font>以下内容：
-  ```sh
+  
+  ```yaml
   scrape_configs:
     - job_name: 'node'
       static_configs:
         - targets: ['YourNodeIP:9100']
-
   ```
 - 访问prometheus的主页http://YourIP:9090 ，
 
