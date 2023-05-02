@@ -100,13 +100,13 @@ tags:
   ```
 - 验证Pushgateway服务是否成功启动，访问http://YourIP:9091 ，如果能够访问，说明启动成功；
 - 配置Prometheus中的Pushgateway，在Prometheus的配置文件prometheus.yml中添加如下配置项：
-  ```
+  ```yaml
   scrape_configs:
     - job_name: 'pushgateway'
       honor_labels: true
       scrape_interval: 5s
       static_configs:
-        - targets: ['localhost:9091']
+        - targets: ['YourNodeIP:9091']
   ```
 - 重新启动Prometheus服务使配置生效。
 
