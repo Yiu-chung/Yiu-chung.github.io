@@ -100,7 +100,7 @@ tags:
   ```
 - 验证Pushgateway服务是否成功启动，访问http://YourIP:9091 ，如果能够访问，说明启动成功；
 - 配置Prometheus中的Pushgateway，在Prometheus的配置文件prometheus.yml中添加如下配置项：
-  ```yaml
+  ```
   scrape_configs:
     - job_name: 'pushgateway'
       honor_labels: true
@@ -136,10 +136,10 @@ tags:
   ```
 ### 6. 使用[PromQL](https://www.prometheus.wang/quickstart/promql_quickstart.html)查询监控数据，在prometheus中进行数据聚合：
 - 进入prometheus的graph页面 http://YourIP:9090/graph ：
+![探索metrics](https://Yiu-chung.github.io/images/prom_search.png)
   - ① 点击Metrics Explorer，查看有哪些metrics；
   - ② 选择一个metric， 如node_memory_Active_bytes；
   - ③ 点击Execute，查看metric的时序曲线。
-  ![探索metrics](https://Yiu-chung.github.io/images/prom_search.png)
 
 - 按照时间（每5分钟）聚合（按照标签区分时间序列）：
   ```sh
@@ -158,11 +158,11 @@ tags:
 ![添加data source](https://Yiu-chung.github.io/images/grafana_datasource.png)
 - New Dashboard $\rightarrow$ Add a new panel
 - 编辑一个panel：
+![编辑panel](https://Yiu-chung.github.io/images/edit_panel.png)
   - ① 使用PromQL查询数据；
   - ② 运行查询，获得指标时序曲线；
   - ③ 编辑title；
   - ④ 应用。
-![编辑panel](https://Yiu-chung.github.io/images/edit_panel.png)
 - 保存Dashboard。
 ### 8. 在Grafana中设置告警
 - 进入Dashboard，Edit Panel；
