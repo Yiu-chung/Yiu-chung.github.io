@@ -134,7 +134,7 @@ tags:
   g.labels(sip=data["sip"], dip=data["dip"]).set(data["latency"])
 
   # 推送数据至Pushgateway
-  push_to_gateway('localhost:9091', job='my_job', registry=CollectorRegistry())
+  push_to_gateway('YourIP:9091', job='my_job', registry=CollectorRegistry())
   ```
 
 ### 6. 使用[PromQL](https://www.prometheus.wang/quickstart/promql_quickstart.html)查询监控数据，在prometheus中进行数据聚合：
