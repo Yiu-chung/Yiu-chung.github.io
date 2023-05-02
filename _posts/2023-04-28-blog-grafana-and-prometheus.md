@@ -134,14 +134,42 @@ tags:
   # 推送数据至Pushgateway
   push_to_gateway('localhost:9091', job='my_job', registry=CollectorRegistry())
   ```
-### 6. 在prometheus中进行数据聚合：
-- 按照时间聚合：
+### 6. 使用[PromQL](https://www.prometheus.wang/quickstart/promql_quickstart.html)查询监控数据，在prometheus中进行数据聚合：
+- 进入prometheus的graph页面 http://YourIP:9090/graph ：
+  - ① 点击Metrics Explorer，查看有哪些metrics；
+  - ② 选择一个metric， 如node_memory_Active_bytes；
+  - ③ 点击Execute，查看metric的时序曲线。
+  ![探索metrics](https://Yiu-chung.github.io/images/prom_search.png)
 
-- 按照标签聚合：
+- 按照时间（每5分钟）聚合（按照标签区分时间序列）：
+  ```sh
+  avg_over_time(YourMetric[5m])
+  ```
+
+- 不区分标签聚合：
+  ```sh
+  avg(YourMetric)
+  ```
 
 ### 7. 将数据接入到Grafana中，设置Dashboard
-
+- 设置Data Source/Prometheus： Configuration $\rightarrow$ Data Source $\rightarrow$ Prometheus；
+- 填入prometheus的URL；
+- 保存：Save & test。
+![添加data source](https://Yiu-chung.github.io/images/grafana_datasource.png)
+- New Dashboard $\rightarrow$ Add a new panel
+- 编辑一个panel：
+  - ① 使用PromQL查询数据；
+  - ② 运行查询，获得指标时序曲线；
+  - ③ 编辑title；
+  - ④ 应用。
+![编辑panel](https://Yiu-chung.github.io/images/edit_panel.png)
+- 保存Dashboard。
 ### 8. 在Grafana中设置告警
+- 进入Dashboard，Edit Panel；
+- 点击Alert $\rightarrow$ Create alert rule from this panel；
+- 选择Classic_conditions，设置针对最新数据last()的告警阈值：
+![设置alert](https://Yiu-chung.github.io/images/grafana_alert.png)
+- 填写告警所属的Folder 和group，保存。 
 
 Headings are cool
 ======
