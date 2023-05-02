@@ -3,9 +3,9 @@ title: '硕士毕业论文系统速成：Grafana和Prometheus'
 date: 2023-04-28
 permalink: /posts/2023/04/grafana-and-prometheus/
 tags:
-  - cool posts
-  - category1
-  - category2
+  - 毕业设计
+  - grafana
+  - prometheus
 ---
 
 本文主要介绍我利用grafana和prometheus两个开源系统快速搭建毕业论文前端的实践经验。这两个系统非常易于上手，只需要花费很少的时间进行学习和搭建。以下是我的操作记录，分享出来供大家参考。
@@ -170,12 +170,3 @@ tags:
 - 选择Classic_conditions，设置针对最新数据last()的告警阈值：
 ![设置alert](https://Yiu-chung.github.io/images/grafana_alert.png)
 - 填写告警所属的Folder 和group，保存。 
-
-Headings are cool
-======
-
-You can have many headings
-======
-
-Aren't headings cool?
-------
