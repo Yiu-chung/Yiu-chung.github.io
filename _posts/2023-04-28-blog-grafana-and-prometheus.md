@@ -13,6 +13,7 @@ tags:
 我直接在CentOS 7.8操作系统上安装了相关软件，没有使用docker，这样做的好处是方便快捷，但缺点是可能会修改系统环境。
 
 具体的操作步骤如下：
+
 ### 1. 安装grafana
 - 在CentOS上安装Grafana的yum源：
   ```sh
@@ -135,6 +136,7 @@ tags:
   # 推送数据至Pushgateway
   push_to_gateway('localhost:9091', job='my_job', registry=CollectorRegistry())
   ```
+
 ### 6. 使用[PromQL](https://www.prometheus.wang/quickstart/promql_quickstart.html)查询监控数据，在prometheus中进行数据聚合：
 - 进入prometheus的graph页面 http://YourIP:9090/graph ：
 ![探索metrics](https://Yiu-chung.github.io/images/prom_search.png)
@@ -165,6 +167,7 @@ tags:
   - ③ 编辑title；
   - ④ 应用。
 - 保存Dashboard。
+  
 ### 8. 在Grafana中设置告警
 - 进入Dashboard，Edit Panel；
 - 点击Alert $\rightarrow$ Create alert rule from this panel；
