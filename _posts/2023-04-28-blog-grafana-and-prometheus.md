@@ -126,15 +126,15 @@ tags:
       "dip": "10.0.0.2",
       "latency": 20,
   }
-
+  registry=CollectorRegistry()
   # 创建Gauge对象
-  g = Gauge('my_metric', 'A gauge', ['sip', 'dip'])
+  g = Gauge('my_metric', 'A gauge', ['sip', 'dip'], registry=registry)
 
   # 设置指标值
   g.labels(sip=data["sip"], dip=data["dip"]).set(data["latency"])
 
   # 推送数据至Pushgateway
-  push_to_gateway('YourIP:9091', job='my_job', registry=CollectorRegistry())
+  push_to_gateway('YourIP:9091', job='my_job', registry=registry)
   ```
 
 ### 6. 使用[PromQL](https://www.prometheus.wang/quickstart/promql_quickstart.html)查询监控数据，在prometheus中进行数据聚合：
