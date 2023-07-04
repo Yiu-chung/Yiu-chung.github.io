@@ -120,7 +120,7 @@ redirect_from:
 其他
 ======
 * **代码语言**: Python，C，C++
-* **证书/执照**：户外领队资格证书，[CSP认证-前3.53%](https://Yiu-chung.github.io/images/csp_grade.jpg)
+* **证书/执照**：户外领队资格证书，[CSP认证-前3.53%](https://Yiu-chung.github.io/images/csp_grade.pdf)
 * **语言**：英语六级（CET-6）
 * **兴趣爱好**：阅读，户外自行车，游泳，羽毛球
 
