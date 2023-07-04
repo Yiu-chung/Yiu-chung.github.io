@@ -110,6 +110,8 @@ tags:
       static_configs:
         - targets: ['YourNodeIP:9091']
   ```
+  其中scrape_interval是数据抓取间隔。
+
 - 重新启动Prometheus服务使配置生效。
 
 ### 5. 使用Prometheus client库（python）上传数据

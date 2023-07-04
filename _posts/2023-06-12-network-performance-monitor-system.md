@@ -270,6 +270,7 @@ tags:
               testMembers = task_content["testMembers"]
               for member in testMembers:
                   connect_to_server(member, 5555, monitor_url+file_name)
+                  time.sleep(7)
 
 
   # 定义要监控的目录路径
@@ -300,6 +301,11 @@ tags:
 ### 5. 安装prometheus与pushgateway，详见文档grafana-and-prometheus。
 
 ### 6. 测量节点接收并执行任务
+- 安装客户端python包：
+  ```sh
+  pip install prometheus_client==0.9.0
+  ```
+
 - 测量节点有一个测量代理程序mAgent.py，负责接收任务：
   ```python
   import socket
