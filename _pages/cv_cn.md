@@ -44,9 +44,9 @@ redirect_from:
 
 奖励与荣誉
 =====
-* 2023年3月, [NDSS2023 杰出论文奖](https://Yiu-chung.github.io/files/ndss23-distinguished-award.pdf).
-* 2022年10月, [清华之友-丰田奖学金](https://Yiu-chung.github.io/files/thu_award.jpg).
-* 2016年12月, [北京大学学习优秀奖](https://Yiu-chung.github.io/files/pku_award.jpg).
+* 2023年3月, [NDSS2023 杰出论文奖](https://Yiu-chung.github.io/images/ndss23-distinguished-award.pdf).
+* 2022年10月, [清华之友-丰田奖学金](https://Yiu-chung.github.io/images/thu_award.jpg).
+* 2016年12月, [北京大学学习优秀奖](https://Yiu-chung.github.io/images/pku_award.jpg).
 
 ***
 
@@ -120,7 +120,7 @@ redirect_from:
 其他
 ======
 * **代码语言**: Python，C，C++
-* **证书/执照**：户外领队资格证书，[CSP认证-前3.53%](https://Yiu-chung.github.io/files/csp_grade.jpg)
+* **证书/执照**：户外领队资格证书，[CSP认证-前3.53%](https://Yiu-chung.github.io/images/csp_grade.jpg)
 * **语言**：英语六级（CET-6）
 * **兴趣爱好**：阅读，户外自行车，游泳，羽毛球
 
